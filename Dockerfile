@@ -1,9 +1,6 @@
 # Uygulama için JDK
 FROM amazoncorretto:17
 
-# Çalışma dizinini ayarla
-WORKDIR /app
-
 # Projede Docker içinde olan JAR dosyası konumu
 ARG JAR_FILE=target/*.jar
 
@@ -11,10 +8,10 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} application.jar
 
 # Linux Update
-CMD apt-get -update-y
+CMD apt-get update-y
 
 # Uygulamanın çalışmasını sağlar
-ENTRYPOINT ["java","-jar","/app/application.jar"]
+ENTRYPOINT ["java","-jar","/application.jar"]
 
 # Uygulamanın dinleyeceği portu belirt
 EXPOSE 8081
