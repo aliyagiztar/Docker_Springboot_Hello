@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aliyagiztar.java_docker_hello.ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-27T09:41:23" hostname="Ali-MacBook-Pro.local" time="0.486">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.aliyagiztar.java_docker_hello.ApplicationTests" time="0.486"/>
+  <system-out><![CDATA[12:41:22.985 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.aliyagiztar.java_docker_hello.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:41:23.033 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.aliyagiztar.java_docker_hello.Application for test class com.aliyagiztar.java_docker_hello.ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-09-27T12:41:23.228+03:00  INFO 85606 --- [    Test worker] c.a.java_docker_hello.ApplicationTests   : Starting ApplicationTests using Java 17.0.12 with PID 85606 (started by aliyagiztar in /Users/aliyagiztar/Desktop/Workspace/Github/Java_Docker_Hello)
+2024-09-27T12:41:23.229+03:00  INFO 85606 --- [    Test worker] c.a.java_docker_hello.ApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2024-09-27T12:41:23.771+03:00  INFO 85606 --- [    Test worker] c.a.java_docker_hello.ApplicationTests   : Started ApplicationTests in 0.674 seconds (process running for 1.247)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
