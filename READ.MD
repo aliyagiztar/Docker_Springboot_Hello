@@ -28,6 +28,7 @@ Dockerfile: Ensure that your Dockerfile is located at the root of the project di
 ![2.png](images/2.png)
 ![3.png](images/3.png)
 
+
 	•	
 🚀 Building the Docker Image
 
