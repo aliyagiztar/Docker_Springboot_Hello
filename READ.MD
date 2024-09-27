@@ -25,6 +25,8 @@ Dockerfile: Ensure that your Dockerfile is located at the root of the project di
 
 🖼️ Images
 ![1.png](images/1.png)
+![2.png](images/2.png)
+![3.png](images/3.png)
 
 
 Below are some example images related to the project:
