@@ -24,7 +24,6 @@ Dockerfile: Ensure that your Dockerfile is located at the root of the project di
 •	JAR File: The compiled JAR file should be located under the build/libs/ directory.
 
 🖼️ Images
-![1.png](images/1.png)
 
 <img width="1211" alt="1" src="https://github.com/user-attachments/assets/e3f681a4-c6f6-4577-8b4d-e29e69caa208">
 <img width="467" alt="2" src="https://github.com/user-attachments/assets/0549f355-0f6b-4e03-9a7a-0fc06f94cd37">
