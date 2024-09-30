@@ -1,104 +1,66 @@
-📦 Java Docker Hello Project
+📦 Microservice Docker Hello
 
-Welcome to the Java Docker Hello project! This guide will walk you through building and running the Java application using Docker. Below are the steps to help you create a Docker image, understand key commands, and ensure best practices like using lowercase repository names and placing the Dockerfile in the correct directory.
+This project demonstrates a simple microservice implemented using Spring Boot, running inside a Docker container. The service exposes multiple REST API endpoints to return greetings and system information.
 
-🛠️ Prerequisites
+Project Structure
 
-Before you get started, ensure you have the following installed on your machine:
+The application is built with the following core components:
 
-	•	Docker installed
-	•	Basic knowledge of Java and Docker
-	•	Access to the project files (including the JAR file and Dockerfile)
+	•	Spring Boot REST Controller: Handles HTTP requests for greeting messages and system info.
+	•	Docker: Dockerizes the Spring Boot microservice for ease of deployment.
+	•	Nginx, PostgreSQL, MySQL: Various Docker containers are used to demonstrate container orchestration.
 
-📂 Project Structure
+Docker Commands
 
-Your project directory should follow this structure for the Docker build to succeed:
-Java_Docker_Hello/
-│
-├── build/
-│   └── libs/
-│       └── Java_Docker_Hello-1.0.0.jar
-├── Dockerfile
-└── README.md
-Dockerfile: Ensure that your Dockerfile is located at the root of the project directory (top-level).
-•	JAR File: The compiled JAR file should be located under the build/libs/ directory.
+Below are the essential Docker commands used to run and manage containers for this project:
 
-🖼️ Images
+Nginx Setup
+docker run -it -d --name my-nginx -p 8080:80 nginx
+docker run -t -d --name my-nginx -p 9999:80 nginx
 
-<img width="1211" alt="1" src="https://github.com/user-attachments/assets/e3f681a4-c6f6-4577-8b4d-e29e69caa208">
-<img width="467" alt="2" src="https://github.com/user-attachments/assets/0549f355-0f6b-4e03-9a7a-0fc06f94cd37">
-<img width="467" alt="3" src="https://github.com/user-attachments/assets/b244f0cd-077a-4349-9603-f4d8c82f7f4c">
-<img width="1555" alt="4" src="https://github.com/user-attachments/assets/a76c8cca-d5ff-4124-901c-7efa31208a0f">
+PostgreSQL Setup
+docker pull postgres:latest
+docker run --name my-postgres -p 9999:5432 -e POSTGRES_PASSWORD=1234567890 -d postgres
+
+MySQL Setup
+docker run --name my-mysql -p 9990:3306 -e MYSQL_ROOT_PASSWORD=1234567890 -d mysql
+
+Building the Docker Image
+To build the Docker image for the Spring Boot microservice, use the following command:
+docker build --build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar --tag aliyagiztar/devops001-hello:v001 .
+
+Run the microservice with:
+docker run --name microservis-docker-hello -p 8081:8081 aliyagiztar/devops001-hello:v001
+
+Spring Boot Endpoints
+
+HTTP Method     Endpoint        Description
+GET             /api/v1/hello   Returns: “Selamlar ben Ali Yağız Tar”
+GET             /api/v2/hello   Returns: “Selamlar ben Ali Yağız Tar”
+GET             /api/v1/info    Returns: Info with current date and time
+GET             /api/v2/info    Returns: Info with current date and time
+
+Images and Containers
+Images and containers related to this project:
+
+	•	MySQL: Local instance and Docker-based instances.
+	•	PostgreSQL: Latest PostgreSQL instance running in Docker.
+	•	Nginx: Used as a simple web server within Docker.
+
+Docker Hub
+The Docker images for this project can be found on Docker Hub:
+•	Repository: aliyagiztar/microservis-docker-hello
+<img width="1950" alt="dockerhub" src="https://github.com/user-attachments/assets/ae81a629-30d7-4cf0-ab13-fa960ee4c127">
 
 
+Additional Notes
+•	Interactive Mode (-it): Allows interaction with the running container.	•	Detached Mode (-d): Runs the container in the background.
+•	Detached Mode (-d): Runs the container in the background.
+•	Exposed Ports: Ports 8080, 9999, 5432, and 3306 are used for Nginx, PostgreSQL, and MySQL services.
 
+Feel free to explore the images and try running the microservice locally using Docker commands.
 
-Below are some example images related to the project:
-
-	•	
-🚀 Building the Docker Image
-
-To build the Docker image, execute the following command in your terminal:
-docker build --build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar -t aliyagiztar/java_docker_hello:v001 .
-🔍 Explanation:
-
-	•	--build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar: This argument specifies the path to your JAR file within the project directory.
-	•	-t aliyagiztar/java_docker_hello:v001: The -t flag assigns a name and tag to your Docker image. Note: The repository name must be in lowercase.
-	•	. (dot): Specifies that the Dockerfile is in the current directory.
-⚠️ Important:
-
-Make sure that the repository name (aliyagiztar/java_docker_hello) is all lowercase to avoid build errors.
-📍 Verifying Your Current Directory
-
-Before building, you may want to confirm that you are in the correct directory. Run the following command to check your current path:
-pwd
-Note: You should be in the root directory of your project where the Dockerfile is located.
-
-📝 Dockerfile Best Practices
-
-Here are some best practices to ensure your Dockerfile is correctly set up:
-
-	•	Location: Place the Dockerfile at the root level of the project directory.
-	•	Repository Name: Always use lowercase letters for the repository name to comply with Docker’s naming conventions.
-	•	Image Tagging: Use meaningful tags like v001, latest, etc., to version your Docker images effectively.
-
-📄 Example Dockerfile
-# Use Amazon Corretto JDK 17
-FROM amazoncorretto:17
-
-# Set working directory
-WORKDIR /app
-
-# Define build argument for the JAR file
-ARG JAR_FILE=build/libs/*.jar
-
-# Copy the JAR file into the container
-COPY ${JAR_FILE} application.jar
-
-# Expose the port that the app will run on
-EXPOSE 8080
-
-# Run the JAR file
-ENTRYPOINT ["java", "-Xmx2048M", "-jar", "application.jar"]
-Dockerfile Key Points:
-
-	•	FROM amazoncorretto:17: Specifies the base image with JDK 17.
-	•	WORKDIR /app: Sets the working directory inside the container.
-	•	COPY ${JAR_FILE} application.jar: Copies the JAR file into the container.
-	•	EXPOSE 8080: Exposes port 8080 to allow communication with the container.
-	•	ENTRYPOINT: Specifies how to run the application inside the container.
-
-✅ Next Steps
-
-After building the Docker image, you can run the container using the following command:
-docker run --name my-java-app -p 8081:8081 aliyagiztar/java_docker_hello:v001
-🎯 Explanation:
-
-	•	--name my-java-app: Names the running container.
-	•	-p 8080:8080: Maps port 8080 on your local machine to port 8080 inside the container.
-	•	aliyagiztar/java_docker_hello:v001: Specifies the Docker image to run.
-
-Once the container is running, you can access your application at http://localhost:8081.
+You can replace image links with correct paths based on your setup. Let me know if you need any more tweaks or additional sections for your README!
 
 📧 Contact & Support
 
