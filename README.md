@@ -26,9 +26,8 @@ Access the Nginx server by visiting http://localhost:8080 in your browser.
 
 ### PostgreSQL Setup
 
-```docker pull postgres:latest
-docker run --name my-postgres -p 9999:5432 -e POSTGRES_PASSWORD=1234567890 -d postgres
-```
+```postgre docker pull postgres:latest```
+```docker run --name my-postgres -p 9999:5432 -e POSTGRES_PASSWORD=1234567890 -d postgres```
 
 
 ### MySQL Setup
