@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aliyagiztar.java_docker_hello.ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-30T15:01:59" hostname="Ali-MacBook-Pro.local" time="0.464">
+<testsuite name="com.aliyagiztar.java_docker_hello.ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-01T08:52:54" hostname="Ali-MacBook-Pro.local" time="0.434">
   <properties/>
-  <testcase name="contextLoads()" classname="com.aliyagiztar.java_docker_hello.ApplicationTests" time="0.464"/>
-  <system-out><![CDATA[18:01:58.630 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.aliyagiztar.java_docker_hello.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-18:01:58.677 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.aliyagiztar.java_docker_hello.Application for test class com.aliyagiztar.java_docker_hello.ApplicationTests
+  <testcase name="contextLoads()" classname="com.aliyagiztar.java_docker_hello.ApplicationTests" time="0.434"/>
+  <system-out><![CDATA[11:52:53.658 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.aliyagiztar.java_docker_hello.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:52:53.699 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.aliyagiztar.java_docker_hello.Application for test class com.aliyagiztar.java_docker_hello.ApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,9 +14,9 @@
 
  :: Spring Boot ::                (v3.3.4)
 
-2024-09-30T18:01:58.833+03:00  INFO 10701 --- [    Test worker] c.a.java_docker_hello.ApplicationTests   : Starting ApplicationTests using Java 17.0.12 with PID 10701 (started by aliyagiztar in /Users/aliyagiztar/Desktop/Workspace/Github/Docker_Springboot_Hello)
-2024-09-30T18:01:58.834+03:00  INFO 10701 --- [    Test worker] c.a.java_docker_hello.ApplicationTests   : No active profile set, falling back to 1 default profile: "default"
-2024-09-30T18:01:59.304+03:00  INFO 10701 --- [    Test worker] c.a.java_docker_hello.ApplicationTests   : Started ApplicationTests in 0.568 seconds (process running for 1.064)
+2024-10-01T11:52:53.862+03:00  INFO 16003 --- [devops-001-hello] [    Test worker] c.a.java_docker_hello.ApplicationTests   : Starting ApplicationTests using Java 17.0.12 with PID 16003 (started by aliyagiztar in /Users/aliyagiztar/Desktop/Workspace/Github/Docker_Springboot_Hello)
+2024-10-01T11:52:53.863+03:00  INFO 16003 --- [devops-001-hello] [    Test worker] c.a.java_docker_hello.ApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:52:54.305+03:00  INFO 16003 --- [devops-001-hello] [    Test worker] c.a.java_docker_hello.ApplicationTests   : Started ApplicationTests in 0.549 seconds (process running for 1.007)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
