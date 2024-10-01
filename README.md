@@ -108,26 +108,26 @@ Important Docker commands and notes from the training:
 
 ### To log in to Docker Hub:
 
-```bash
+```nginx
 docker login --username aliyagiztar --password-stdin
 ```
 
 ### Short usage:
 
-```bash
+```nginx
 docker login -u aliyagiztar -p 123456789
 ```
 
 ### Run Nginx container:
 
 # Mapping HOST_PORT:CONTAINER_PORT
-```bash
+```nginx
 docker run -it -d --name my-nginx -p 8080:80 nginx
 ```
-```bash
+```nginx
 docker run -t -d --name my-nginx -p 9999:80 nginx
 ```
-```bash
+```nginx
 docker run -t -d -p 9091:80 --name my-nginx nginx
 ```
 <img width="1401" alt="dockercontainers" src="https://github.com/user-attachments/assets/78ec06ad-a2a2-4eae-b81b-3a85c46bd11f">
@@ -141,22 +141,22 @@ Access Nginx at: http://localhost:8080
 ### PostgreSQL:
 
 docker pull postgres:latest
-```bash
+```nginx
 docker run --name my-postgres -p 9999:5432 -e POSTGRES_PASSWORD=1234567890 -d postgres
 ```
 
 ### MySQL:
 
-```bash
+```nginx
 docker run --name my-mysql -p 9990:3306 -e MYSQL_ROOT_PASSWORD=1234567890 -d mysql
 ```
 
 ### Building Docker Image for the Project:
 
-```bash
+```nginx
 docker build --build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar --tag aliyagiztar/devops001-hello:v001 .
 ```
-```bash
+```nginx
 docker build --build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar --tag aliyagiztar/devops001-hello:v002 .
 ```
 
@@ -168,9 +168,9 @@ docker run --name microservis-docker-hello -p 8081:8081 aliyagiztar/devops001-he
 
 ### Renaming a Container:
 
-```bash
+```nginx
 docker container rename my-app3 my-app4
 ```
 
-📧 Contact & Support
+📧 <code style="color : Aqua">Contact & Support</code>
 For any questions or issues regarding this project, feel free to reach out via aliyagiz.tar@gmail.com or visit our GitHub Repository.
