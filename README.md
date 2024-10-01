@@ -28,37 +28,37 @@ Access the Nginx server by visiting http://localhost:8080 in your browser.
 
 ### PostgreSQL Setup
 
-```bash
+```nginx
 docker pull postgres:latest
 ```
-```shell
+```nginx
 docker run --name my-postgres -p 9999:5432 -e POSTGRES_PASSWORD=1234567890 -d postgres
 ```
 
 
 ### MySQL Setup
 
-```bash
+```nginx
 docker run --name my-mysql -p 9990:3306 -e MYSQL_ROOT_PASSWORD=1234567890 -d mysql
 ```
 
 ### Building the Docker Image
 To build the Docker image for the Spring Boot microservice, use the following command:
 
-```bash
+```nginx
 docker build --build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar --tag aliyagiztar/devops001-hello:v001 .
 ```
 
 ### Version tag:
 
-```bash
+```nginx
 docker build --build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar --tag aliyagiztar/devops001-hello:v002 .
 ```
 
 ### Running the Microservice
 ### Run the microservice with:
 
-```bash
+```nginx
 docker run --name microservis-docker-hello -p 8081:8081 aliyagiztar/devops001-hello:v001
 ```
 
@@ -173,7 +173,7 @@ docker container rename my-app3 my-app4
 ```
 
 ## 📧 <code style="color : Aqua">Contact & Support</code>
-```nginx
+```
 For any questions or issues regarding this project, feel free to reach out via aliyagiz.tar@gmail.com or visit our GitHub Repository.
 ```
 
