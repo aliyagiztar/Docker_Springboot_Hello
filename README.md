@@ -162,7 +162,7 @@ docker build --build-arg JAR_FILE=build/libs/Java_Docker_Hello-1.0.0.jar --tag a
 
 ### Running the Microservice:
 
-```docker
+```nginx
 docker run --name microservis-docker-hello -p 8081:8081 aliyagiztar/devops001-hello:v001
 ```
 
