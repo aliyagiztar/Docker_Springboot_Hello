@@ -38,7 +38,8 @@ docker run --name my-postgres -p 9999:5432 -e POSTGRES_PASSWORD=1234567890 -d po
 
 ### MySQL Setup
 
-```docker run --name my-mysql -p 9990:3306 -e MYSQL_ROOT_PASSWORD=1234567890 -d mysql```
+```bash
+docker run --name my-mysql -p 9990:3306 -e MYSQL_ROOT_PASSWORD=1234567890 -d mysql```
 
 ### Building the Docker Image
 To build the Docker image for the Spring Boot microservice, use the following command:
