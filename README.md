@@ -11,7 +11,7 @@ Docker Commands
 Below are the essential Docker commands used to run and manage containers for this project:
 
 ### Nginx Setup
-```
+```nginx
 docker run -it -d --name my-nginx -p 8080:80 nginx
 docker run -t -d --name my-nginx -p 9999:80 nginx
 docker run -t -d -p 9091:80 --name my-nginx nginx
