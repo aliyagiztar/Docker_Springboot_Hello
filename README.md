@@ -173,6 +173,8 @@ docker container rename my-app3 my-app4
 ```
 
 ## 📧 <code style="color : Aqua">Contact & Support</code>
-[![Contact & Support](https://img.shields.io/badge/Contact%20%26%20Support-Aqua)](mailto:aliyagiz.tar@gmail.com)
-
+```nginx
 For any questions or issues regarding this project, feel free to reach out via aliyagiz.tar@gmail.com or visit our GitHub Repository.
+```
+
+[![Contact & Support](https://img.shields.io/badge/Contact%20%26%20Support-Aqua)](mailto:aliyagiz.tar@gmail.com)
