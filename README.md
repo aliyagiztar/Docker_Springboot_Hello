@@ -16,6 +16,8 @@ docker run -it -d --name my-nginx -p 8080:80 nginx
 docker run -t -d --name my-nginx -p 9999:80 nginx
 docker run -t -d -p 9091:80 --name my-nginx nginx
 ```
+<img width="2070" alt="nginx" src="https://github.com/user-attachments/assets/ed40e234-2201-4d0a-8227-07b4b4cc3b2d">
+
 
 ### Notes:
 
@@ -26,7 +28,7 @@ Access the Nginx server by visiting http://localhost:8080 in your browser.
 
 ### PostgreSQL Setup
 
-```postgre docker pull postgres:latest```
+```docker pull postgres:latest```
 ```docker run --name my-postgres -p 9999:5432 -e POSTGRES_PASSWORD=1234567890 -d postgres```
 
 
@@ -57,14 +59,24 @@ GET	/api/v1/info	Returns: Info with current date and time
 GET	/api/v2/info	Returns: Info with current date and time
 GET	/api/v1	Returns: “DevOps Hello” with current date and time
 
-Images and Containers
 
-Images and containers related to this project:
+<img width="832" alt="8081:info" src="https://github.com/user-attachments/assets/afd27899-5793-4f18-bedd-0f910a4971f0">
+<img width="832" alt="8082:hello" src="https://github.com/user-attachments/assets/fdb3dc3e-ad41-4180-8b70-01cdbde1676e">
+<img width="832" alt="8083:merhaba" src="https://github.com/user-attachments/assets/dc1d8928-092b-4501-a664-6ca988c26e91">
+<img width="832" alt="8083:info" src="https://github.com/user-attachments/assets/ba32d582-8ae9-4585-82a8-deffb1247d49">
+
+
+
+
 
 ### MySQL: 
 Local instance and Docker-based instances.
 PostgreSQL: Latest PostgreSQL instance running in Docker.
 Nginx: Used as a simple web server within Docker.
+
+<img width="2273" alt="mysql" src="https://github.com/user-attachments/assets/4345847c-5f10-494b-84f0-28177f7f0b5e">
+
+
 
 ### Docker Hub
 The Docker images for this project can be found on Docker Hub:
@@ -96,6 +108,8 @@ Important Docker commands and notes from the training:
 ```docker run -it -d --name my-nginx -p 8080:80 nginx```
 ```docker run -t -d --name my-nginx -p 9999:80 nginx```
 ```docker run -t -d -p 9091:80 --name my-nginx nginx```
+<img width="1401" alt="dockercontainers" src="https://github.com/user-attachments/assets/78ec06ad-a2a2-4eae-b81b-3a85c46bd11f">
+
 
 
 -it: Interactive mode.
